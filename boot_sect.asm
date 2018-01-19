@@ -1,5 +1,5 @@
 [org 0x7c00]
-KERNEL_OFFSET equ = 0x1000
+KERNEL_OFFSET equ  0x200
 
 	mov [BOOT_DRIVE], dl;
 	
@@ -19,7 +19,7 @@ KERNEL_OFFSET equ = 0x1000
 %include "disk_load.asm" 
 %include "gdt.asm"
 %include "print_string_pm.asm"
-%include switch_to_pm.asm"
+%include "switch_to_pm.asm"
 
 [bits 16]
 
